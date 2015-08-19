@@ -1,16 +1,186 @@
 <div class="container-fluid">
-    <h1>Products</h1>
-    <hr />
+    <div class="row">
+        <div class="col col-sm-7">
+            <div class="panel panel-success">
+                <div class="panel-heading"><h3>Strategic Alignment <span class="badge pull-right">{{ getModelStrategyScore() | number:2 }}</span></h3></div>
+                <div class="panel-body">
+                    <h4>Strategic Goal #1</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div class="row">
+                        <div class="col col-sm-10">
+                            <div ui-slider min="0" max="10" ng-model="model.strategic.s1"></div>
+                        </div>
+                        <div class="col col-sm-2">
+                            <input type="text" ng-model="model.strategic.s1" class="score" />
+                        </div>
+                    </div>
 
-    <h3>Impact</h3>
-    <div ui-slider min="0" max="20" ng-model="model.impact"></div>
+                    <h4>Strategic Goal #2</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div class="row">
+                        <div class="col col-sm-10">
+                            <div ui-slider min="0" max="10" ng-model="model.strategic.s2"></div>
+                        </div>
+                        <div class="col col-sm-2">
+                            <input type="text" ng-model="model.strategic.s2" class="score" />
+                        </div>
+                    </div>
 
-    <h3>Risk</h3>
-    <div ui-slider min="0" max="20" ng-model="model.risk"></div>
+                    <h4>Strategic Goal #3</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div class="row">
+                        <div class="col col-sm-10">
+                            <div ui-slider min="0" max="10" ng-model="model.strategic.s3"></div>
+                        </div>
+                        <div class="col col-sm-2">
+                            <input type="text" ng-model="model.strategic.s3" class="score" />
+                        </div>
+                    </div>
 
-    <h3>Effort</h3>
-    <div ui-slider min="0" max="20" ng-model="model.effort"></div>
+                    <h4>Strategic Goal #4</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div class="row">
+                        <div class="col col-sm-10">
+                            <div ui-slider min="0" max="10" ng-model="model.strategic.s4"></div>
+                        </div>
+                        <div class="col col-sm-2">
+                            <input type="text" ng-model="model.strategic.s4" class="score" />
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-    <h3>Strategic Alignment</h3>
-    <div ui-slider min="0" max="20" ng-model="model.strategic"></div>
+            <div class="panel panel-info">
+                <div class="panel-heading"><h3>Impact <span class="badge pull-right">{{ getModelImpactScore() | number:2 }}</span></h3></div>
+                <div class="panel-body">
+                    <h4>Differentiation/Competitive Advantage</h4>
+                    <p>How much will this product differentiate us and how great of a competitive advantage will this product give us versus our primary market competition?</p>
+                    <div class="row">
+                        <div class="col col-sm-10">
+                            <div ui-slider min="0" max="10" ng-model="model.impact.competitive"></div>
+                        </div>
+                        <div class="col col-sm-2">
+                            <input type="text" ng-model="model.impact.competitive" class="score" />
+                        </div>
+                    </div>
+
+                    <h4>Sales Pipeline</h4>
+                    <p>What is the demand level for this product? How much will it increase the sales pipeline?</p>
+                    <div class="row">
+                        <div class="col col-sm-10">
+                            <div ui-slider min="0" max="10" ng-model="model.impact.pipeline"></div>
+                        </div>
+                        <div class="col col-sm-2">
+                            <input type="text" ng-model="model.impact.pipeline" class="score" />
+                        </div>
+                    </div>
+
+                    <h4>Revenue Generation</h4>
+                    <p>How much revenue will this product generate?</p>
+                    <div class="row">
+                        <div class="col col-sm-10">
+                            <div ui-slider min="0" max="10" ng-model="model.impact.revenue"></div>
+                        </div>
+                        <div class="col col-sm-2">
+                            <input type="text" ng-model="model.impact.revenue" class="score" />
+                        </div>
+                    </div>
+
+                    <h4>Operational Efficiency</h4>
+                    <p>How much will this product increase the operational efficiency and productivity of our workforce?</p>
+                    <div class="row">
+                        <div class="col col-sm-10">
+                            <div ui-slider min="0" max="10" ng-model="model.impact.operations"></div>
+                        </div>
+                        <div class="col col-sm-2">
+                            <input type="text" ng-model="model.impact.operations" class="score" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-warning">
+                <div class="panel-heading"><h3>Effort <span class="badge pull-right">{{ getModelEffortScore() | number:2 }}</span></h3></div>
+                <div class="panel-body">
+                    <h4>Infrastructure Effort</h4>
+                    <p>How much effort is expected to be required of our Cloud Architecture, Systems, Network or Corporate IT teams to build this product?</p>
+                    <div class="row">
+                        <div class="col col-sm-10">
+                            <div ui-slider min="0" max="10" ng-model="model.effort.infrastructure"></div>
+                        </div>
+                        <div class="col col-sm-2">
+                            <input type="text" ng-model="model.effort.infrastructure" class="score" />
+                        </div>
+                    </div>
+
+                    <h4>Development Effort</h4>
+                    <p>How much effort is expected to be required of our Development and Engineering teams?</p>
+                    <div class="row">
+                        <div class="col col-sm-10">
+                            <div ui-slider min="0" max="10" ng-model="model.effort.development"></div>
+                        </div>
+                        <div class="col col-sm-2">
+                            <input type="text" ng-model="model.effort.development" class="score" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel panel-danger">
+                <div class="panel-heading"><h3>Risk <span class="badge pull-right">{{ getModelRiskScore() | number:2 }}</span></h3></div>
+                <div class="panel-body">
+                    <h4>Market Volatility Risk</h4>
+                    <p>What is the risk that the value proposition will decrease due to moves in market factors?</p>
+                    <div class="row">
+                        <div class="col col-sm-10">
+                            <div ui-slider min="0" max="10" ng-model="model.risk.market"></div>
+                        </div>
+                        <div class="col col-sm-2">
+                            <input type="text" ng-model="model.risk.market" class="score" />
+                        </div>
+                    </div>
+
+                    <h4>Technical Risk</h4>
+                    <p>What is the risk that the product will have adverse technical effects on existing infrastructure?</p>
+                    <div class="row">
+                        <div class="col col-sm-10">
+                            <div ui-slider min="0" max="10" ng-model="model.risk.technical"></div>
+                        </div>
+                        <div class="col col-sm-2">
+                            <input type="text" ng-model="model.risk.technical" class="score" />
+                        </div>
+                    </div>
+
+                    <h4>Operational Risk</h4>
+                    <p>What is the risk of failure from inadequent implementation of operational processes, or what is the risk of adverse effects to existing operational processes?</p>
+                    <div class="row">
+                        <div class="col col-sm-10">
+                            <div ui-slider min="0" max="10" ng-model="model.risk.operational"></div>
+                        </div>
+                        <div class="col col-sm-2">
+                            <input type="text" ng-model="model.risk.operational" class="score" />
+                        </div>
+                    </div>
+
+                    <h4>Financial Risk</h4>
+                    <p>What is the risk of this product failing to produce any ROI within 12 months?</p>
+                    <div class="row">
+                        <div class="col col-sm-10">
+                            <div ui-slider min="0" max="10" ng-model="model.risk.financial"></div>
+                        </div>
+                        <div class="col col-sm-2">
+                            <input type="text" ng-model="model.risk.financial" class="score" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col col-sm-5">
+            <div class="btn-group summary">
+                <button ng-repeat="r in results" class="btn btn-{{ r.class }}"><em>{{ r.label }}:</em> {{ r.score | number:2 }}</button>
+            </div>
+            <div id="chart"></div>
+        </div>
+    </div>
+
 </div>

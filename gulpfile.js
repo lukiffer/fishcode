@@ -10,7 +10,7 @@ gulp.task('clean', function() {
 gulp.task('styles', function() {
   return gulp.src([
       'src/assets/**/*.less', 
-      'bower_components/jquery-ui/themes/base/jquery-ui.min.css'
+      'bower_components/jquery-ui/themes/flick/jquery-ui.min.css'
     ])
     .pipe($.less())
     .pipe($.concat('cod.css'))
@@ -31,6 +31,8 @@ gulp.task('scripts', function() {
       'bower_components/bootstrap/js/modal.js',
       'bower_components/jquery-ui/ui/jquery-ui.custom.js',
       'bower_components/angular-ui-slider/src/slider.js',
+      'bower_components/d3/d3.js',
+      'bower_components/lodash/lodash.js',
       'src/cod/**/*.js'
     ])
     .pipe($.concat('cod.js'))
@@ -60,7 +62,7 @@ gulp.task('connect', ['build'], function() {
     middleware: function(connect, opt) {
       return [
         connectModRewrite([
-          '!\\.?(js|css|html) / [L]',
+          '!\\.?(js|css|html|csv) / [L]',
         ]),
       ];
     }
